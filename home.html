@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>月小璃 CVVC · 官方主页</title>
+<style>
+  :root{--m:#6ec6ff;--p:#b39ddb;--a:#5a9;--r:#e66;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:linear-gradient(160deg,#eaf6ff,#f3edff);font-family:"Microsoft YaHei",sans-serif;color:#333;line-height:1.7;}
+  header{text-align:center;padding:50px 20px 30px;background:linear-gradient(135deg,var(--m),var(--p));color:#fff;}
+  header h1{font-size:32px;letter-spacing:2px;}
+  header .sub{margin-top:8px;font-size:15px;opacity:.95;}
+  header .nav{margin-top:20px;}
+  header .nav a{color:#fff;margin:0 12px;font-size:14px;text-decoration:none;opacity:.9;border-bottom:1px solid transparent;}
+  header .nav a:hover{border-bottom:1px solid #fff;}
+  .wrap{max-width:820px;margin:0 auto;padding:30px 20px;}
+  section{background:#fff;border-radius:18px;padding:26px;margin-bottom:26px;box-shadow:0 6px 16px rgba(0,0,0,.06);}
+  h2{color:var(--a);font-size:22px;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .char{flex:1;min-width:220px;}
+  .top{display:flex;gap:24px;flex-wrap:wrap;align-items:center;}
+  .top img{width:220px;border-radius:14px;animation:float 3s ease-in-out infinite;}
+  @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+  table{width:100%;border-collapse:collapse;}
+  td{padding:7px 6px;border-bottom:1px solid #f0f0f0;vertical-align:top;}
+  td:first-child{font-weight:bold;color:var(--r);width:88px;}
+  .player{background:#f7fbff;border-radius:12px;padding:18px;text-align:center;}
+  audio{width:100%;max-width:520px;margin-top:10px;}
+  .dl{clear:both;}
+  .btn{display:inline-block;background:var(--a);color:#fff;padding:12px 28px;border-radius:25px;text-decoration:none;font-size:16px;margin:8px 6px;transition:.2s;}
+  .btn:hover{background:#4a8;transform:translateY(-2px);}
+  .btn.r{background:var(--r);}
+  .btn.r:hover{background:#d55;}
+  .steps{counter-reset:s;list-style:none;}
+  .steps li{position:relative;padding:10px 10px 10px 48px;border-bottom:1px dashed #eee;}
+  .steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:30px;height:30px;background:linear-gradient(135deg,var(--m),var(--p));color:#fff;border-radius:50%;text-align:center;line-height:30px;font-weight:bold;}
+  code{background:#f0f4f8;padding:2px 7px;border-radius:5px;font-size:13px;color:#c0392b;}
+  .log .v{color:var(--r);font-weight:bold;}
+  .log li{margin:8px 0;}
+  .chips span{display:inline-block;background:#f0f4f8;color:var(--a);padding:4px 12px;border-radius:15px;margin:4px 3px;font-size:13px;}
+  footer{text-align:center;color:#aaa;font-size:12px;padding:30px;}
+  .egg{cursor:pointer;color:var(--p);font-size:13px;margin-top:10px;user-select:none;}
+  .egg img{display:none;margin-top:12px;border-radius:12px;width:260px;}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎤 月小璃 CVVC</h1>
+  <div class="sub">中文 CVVC 虚拟歌姬声库 · 甜美清新 · 元气少女</div>
+  <div class="nav">
+    <a href="#about">认识小璃</a>
+    <a href="#listen">试听</a>
+    <a href="#download">下载</a>
+    <a href="#tutorial">使用教程</a>
+    <a href="#changelog">更新日志</a>
+    <a href="#setting">设定集</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- 角色介绍 -->
+  <section id="about">
+    <h2>👋 认识月小璃</h2>
+    <div class="top">
+      <img src="icon.png" alt="月小璃">
+      <div class="char">
+        <p>「录音开始！」🎙️</p>
+        <p>月小璃，14岁，明天共和国公民 #TM-002。元气活泼、偶尔天然呆，一拿起麦克风就秒变认真模式。声源系执政官月凌，被窝录音法诞生嘅第一只中文 CVVC 声库。</p>
+        <div class="chips">
+          <span>甜美声线</span><span>C4单音高</span><span>46条音素</span>
+          <span>匹诺曹P粉</span><span>讨厌爆音</span>
+        </div>
+      </div>
+    </div>
+    <table style="margin-top:18px;">
+      <tr><td>姓名</td><td>月小璃（Yue Xiaoli）· 别名：小璃、璃酱</td></tr>
+      <tr><td>设定</td><td>14岁 · 152cm · 女</td></tr>
+      <tr><td>形象</td><td>蓝紫渐变双马尾+呆毛 · 翠绿瞳 · 绿裙+红蝴蝶结+深绿绑带靴</td></tr>
+      <tr><td>代表色</td><td>#6ec6ff → #b39ddb</td></tr>
+      <tr><td>声源</td><td>月凌（明天共和国执政官）</td></tr>
+      <tr><td>制作者</td><td>月凌（文化部）｜画师：同桌（手绘）+ AI精修</td></tr>
+    </table>
+  </section>
+
+  <!-- 试听 -->
+  <section id="listen">
+    <h2>🎵 试听曲《茉莉花》</h2>
+    <div class="player">
+      <p>轻快元气版 · C调 · BPM 85 · 月小璃 CVVC v0.1 首秀🎂</p>
+      <audio controls src="listen.mp3" preload="none">
+        你嘅浏览器唔支持音频播放，<a href="listen.mp3">点呢度下载试听</a>
+      </audio>
+      <p style="margin-top:12px;color:#888;font-size:13px;">
+        歌词：好一朵美丽的茉莉花～芬芳美丽满枝桠～
+      </p>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section id="download">
+    <h2>📦 下载声库</h2>
+    <p>🎧 格式：中文 CVVC · OpenUtau / UTAU 0.4.18+ 可用<br>
+       🎙️ 内容：46条音素 · 单音高 C4 · 推荐 BPM 80-120</p>
+    <div class="dl" style="margin-top:16px;">
+      <a class="btn r" href="yuexiaoli_cvvc_v0.1.zip">⬇ 月小璃 CVVC v0.1（zip）</a>
+      <a class="btn" href="https://xiaobei484.github.io/yuexiaoli/" target="_blank">🎂 预约 / 发布页</a>
+    </div>
+    <p style="margin-top:14px;font-size:13px;color:#888;">
+      使用前请看下面教程 · 商用需授权，详见包内 readme.txt
+    </p>
+  </section>
+
+  <!-- 教程 -->
+  <section id="tutorial">
+    <h2>🛠️ 使用教程</h2>
+    <ol class="steps">
+      <li>解压 zip，把 <code>月小璃/</code> 文件夹整体拖到 <code>OpenUtau/voice/</code>（或 UTAU 的 voice 目录）</li>
+      <li>重启 OpenUtau，新建音轨 → 音源选「月小璃 CVVC」</li>
+      <li>音素器选 <code>Chinese CVVC</code>（装咗 character.yaml 会自动选）</li>
+      <li>歌词栏填拼音：<code>hao yi duo mei li de mo li hua</code></li>
+      <li>推荐音域 C4±2度，BPM 80-120，唱起来最自然</li>
+      <li>爆音？把嗰条音素嘅 Preutterance 缩短；断音？拉长 Overlap</li>
+    </ol>
+    <p style="margin-top:12px;font-size:13px;color:#888;">
+      更多技巧 → 包内 readme.txt · 有问题欢迎到发布页留言
+    </p>
+  </section>
+
+  <!-- 更新日志 -->
+  <section id="changelog">
+    <h2>📝 更新日志</h2>
+    <ul class="log">
+      <li><span class="v">v0.1</span> 2026-11-04｜首发 🎂 46条中文CVVC音素 · C4单音高 · 首支试听曲《茉莉花》</li>
+      <li><span class="v">v0.2</span> 筹备中｜多音高扩展（C3/C4/C5）· 连续音过渡优化</li>
+      <li><span class="v">v0.3</span> 画饼中｜呼吸音+气声采样 · 英文 CVVC 实验包</li>
+    </ul>
+  </section>
+
+  <!-- 设定集彩蛋 -->
+  <section id="setting">
+    <h2>🎨 设定集</h2>
+    <p>角色设计稿、三视图、表情差分……慢慢解锁🤪</p>
+    <div class="chips">
+      <span>正面立绘 ✅</span><span>侧面 ⏳</span><span>背面 ⏳</span>
+      <span>Q版表情包 ⏳</span><span>生日贺图 🎂</span>
+    </div>
+    <div class="egg" onclick="this.querySelector('img').style.display='block';this.style.display='none';">
+      🥚 偷偷点我（彩蛋）
+      <img src="icon.png" alt="彩蛋">
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 月凌 · 明天共和国文化部 ｜ 声库版权归制作者所有，使用请署名「声库：月小璃 CVVC by 月凌」<br>
+  <a href="https://xiaobei484.github.io/tomorrow-republic-citizens" style="color:#aac;">明天共和国公民页 →</a>
+</footer>
+</body>
+</html>
