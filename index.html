@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>月小璃 CVVC 声库 v0.1 · 预约</title>
+<style>
+  body { margin:0; background:#f0f7fa; font-family:"Microsoft YaHei",sans-serif; color:#333; text-align:center; }
+  .container { max-width:600px; margin:0 auto; padding:40px 20px; }
+  h1 { color:#5a9; font-size:24px; margin:20px 0 10px; }
+  .slogan { font-size:20px; color:#e66; font-weight:bold; margin:10px 0 30px; }
+  .char-img { width:100%; max-width:500px; animation:float 3s ease-in-out infinite; }
+  @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+  .info { background:#fff; border-radius:15px; padding:20px; margin:20px 0; box-shadow:0 4px 10px rgba(0,0,0,0.05); }
+  .info p { margin:8px 0; color:#555; }
+  .profile { background:#fff; border-radius:15px; padding:20px; margin:20px 0; box-shadow:0 4px 10px rgba(0,0,0,0.05); text-align:left; }
+  .profile h3 { color:#5a9; margin-top:0; text-align:center; }
+  .profile table { width:100%; border-collapse:collapse; }
+  .profile td { padding:8px 6px; border-bottom:1px solid #eee; vertical-align:top; }
+  .profile td:first-child { font-weight:bold; color:#e66; width:80px; }
+  #countdown { font-size:32px; font-weight:bold; color:#5a9; margin:20px 0; font-family:"Courier New",monospace; }
+  .btn { display:inline-block; background:#5a9; color:#fff; padding:12px 30px; border-radius:25px; text-decoration:none; font-size:16px; margin:10px; cursor:pointer; border:none; }
+  .btn:hover { background:#4a8; }
+  .released { color:#e66; font-size:24px; font-weight:bold; margin:20px 0; }
+  .download-btn { background:#e66; }
+  .download-btn:hover { background:#d55; }
+  .home-link { margin-top:16px; font-size:14px; color:#888; }
+  .home-link a { color:#5a9; text-decoration:none; font-weight:bold; }
+  .home-link a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🎤 月小璃 CVVC 声库 v0.1</h1>
+  <div class="slogan">11月4日·月小璃同你「声」日见面🎂</div>
+
+  <img class="char-img" src="icon.png" alt="月小璃立绘">
+
+  <div class="info">
+    <p>🎙️ 声线：甜美清新 · 元气少女</p>
+    <p>🎧 格式：中文 CVVC · OpenUtau/UTAU 可用</p>
+    <p>📦 内容：46条音素 · 单音高 C4</p>
+    <p>🎨 立绘：同桌手绘 + AI精修</p>
+    <p>📅 录音：2026年10月 · 被窝录音法</p>
+  </div>
+
+  <div class="profile">
+    <h3>📋 月小璃 · 个人信息</h3>
+    <table>
+      <tr><td>姓名</td><td>月小璃（Yue Xiaoli）</td></tr>
+      <tr><td>别名</td><td>小璃、璃酱</td></tr>
+      <tr><td>性别</td><td>女</td></tr>
+      <tr><td>年龄</td><td>14岁（设定）</td></tr>
+      <tr><td>身高</td><td>152cm</td></tr>
+      <tr><td>代表色</td><td>蓝绿渐变 #6ec6ff → #b39ddb</td></tr>
+      <tr><td>发色</td><td>蓝紫渐变双马尾 + 呆毛</td></tr>
+      <tr><td>瞳色</td><td>翠绿</td></tr>
+      <tr><td>服装</td><td>绿色连衣裙 + 红色蝴蝶结 + 深绿绑带靴</td></tr>
+      <tr><td>声源</td><td>月凌</td></tr>
+      <tr><td>声库类型</td><td>中文 CVVC · 录音46条 · C4单音高</td></tr>
+      <tr><td>性格</td><td>元气活泼 · 偶尔天然呆 · 唱歌时超认真</td></tr>
+      <tr><td>喜好</td><td>唱歌、听匹诺曹P、和月凌一起录歌</td></tr>
+      <tr><td>讨厌</td><td>爆音、口水声、oto.ini手调</td></tr>
+      <tr><td>口头禅</td><td>「录音开始！」</td></tr>
+      <tr><td>所属</td><td>明天共和国公民 #TM-002</td></tr>
+      <tr><td>制作者</td><td>月凌（文化部）</td></tr>
+      <tr><td>画师</td><td>同桌（手绘）+ AI精修</td></tr>
+    </table>
+  </div>
+
+  <div id="countdown">加载中...</div>
+
+  <button class="btn" onclick="downloadICS()">📅 标记日历</button>
+  <a class="btn download-btn" id="downloadBtn" href="yuexiaoli_cvvc_v0.1.zip" style="display:none;">🎤 立即下载声库</a>
+
+  <!-- 🆕 主页入口 -->
+  <div class="home-link">
+    <p>🎵 想先认识小璃？<a href="home.html">进入官方主页 →</a></p>
+    <p>📝 使用教程 · 试听曲 · 设定集 · 更新日志</p>
+  </div>
+
+  <p style="margin-top:30px;color:#aaa;font-size:12px;">© 2026 月凌 · 明天共和国文化部</p>
+</div>
+
+<script>
+  function updateCountdown() {
+    var target = new Date('2026-11-04T00:00:00');
+    var now = new Date();
+    var diff = target - now;
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML = '🎉🎂🎤 月小璃·正式发声！';
+      document.getElementById('downloadBtn').style.display = 'inline-block';
+      return;
+    }
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    var secs = Math.floor((diff % (1000 * 60 * 60)) / 1000);
+    document.getElementById('countdown').innerHTML = days + '天 ' + hours + '时 ' + mins + '分 ' + secs + '秒';
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  function downloadICS() {
+    var ics = 'BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:20261104T000000\nSUMMARY:月小璃 CVVC 声库 v0.1 发布！\nDESCRIPTION:11月4日·月小璃同你「声」日见面🎂\nEND:VEVENT\nEND:VCALENDAR';
+    var blob = new Blob([ics], {type: 'text/calendar'});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'yuexiaoli_release.ics';
+    a.click();
+  }
+</script>
+</body>
+</html>
